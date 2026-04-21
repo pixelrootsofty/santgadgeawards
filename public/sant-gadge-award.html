@@ -38,7 +38,7 @@
 
   /* HERO */
   .hero{position:relative;height:100vh;min-height:640px;display:flex;align-items:center;justify-content:center;text-align:center;color:var(--offwhite);overflow:hidden}
-  .hero-bg{position:absolute;inset:0;background:url('https://source.unsplash.com/1600x900/?social+service,india') center/cover no-repeat;transform:scale(1.05);animation:slowZoom 20s ease-in-out infinite alternate}
+  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1593113598332-cd288d649433?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;transform:scale(1.05);animation:slowZoom 20s ease-in-out infinite alternate}
   @keyframes slowZoom{to{transform:scale(1.15)}}
   .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,0,.7),rgba(123,13,30,.85))}
   .hero-content{position:relative;z-index:2;padding:0 24px;max-width:1000px}
@@ -66,7 +66,7 @@
   /* ABOUT */
   .about{background:var(--offwhite)}
   .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-  .about-img{border-radius:18px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 20px 50px rgba(123,13,30,.25);aspect-ratio:4/3;background:url('https://source.unsplash.com/800x600/?award+ceremony,india') center/cover no-repeat}
+  .about-img{border-radius:18px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 20px 50px rgba(123,13,30,.25);aspect-ratio:4/3;background:url('https://images.unsplash.com/photo-1559027615-cd4628902d4a?auto=format&fit=crop&w=900&q=80') center/cover no-repeat}
   .about-text h3{color:var(--maroon);font-size:1.5rem;margin:18px 0 8px;display:flex;align-items:center;gap:12px}
   .about-text h3 i{color:var(--saffron)}
   .about-text p{color:#444;margin-bottom:8px}
@@ -76,8 +76,8 @@
   .cat-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(360px,1fr));gap:30px}
   .cat-card{position:relative;height:380px;border-radius:18px;overflow:hidden;cursor:pointer;box-shadow:0 12px 30px rgba(0,0,0,.15);transition:.4s}
   .cat-card .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.6s}
-  .cat-card:nth-child(1) .bg{background-image:url('https://source.unsplash.com/800x600/?healthcare,doctor,india')}
-  .cat-card:nth-child(2) .bg{background-image:url('https://source.unsplash.com/800x600/?community,volunteer,india')}
+  .cat-card:nth-child(1) .bg{background-image:url('https://images.unsplash.com/photo-1584515933487-779824d29309?auto=format&fit=crop&w=900&q=80')}
+  .cat-card:nth-child(2) .bg{background-image:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=900&q=80')}
   .cat-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,rgba(0,0,0,.2) 0%,rgba(123,13,30,.85) 100%);transition:.4s}
   .cat-card:hover .bg{transform:scale(1.12)}
   .cat-card:hover .ov{background:linear-gradient(180deg,rgba(255,107,0,.3) 0%,rgba(123,13,30,.7) 100%)}
@@ -95,12 +95,12 @@
   .act-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85) 100%);transition:.4s}
   .act-card:hover .bg{transform:scale(1.1)}
   .act-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.25)}
-  .act-card:nth-child(1) .bg{background-image:url('https://source.unsplash.com/800x500/?durga+puja,festival,india')}
-  .act-card:nth-child(2) .bg{background-image:url('https://source.unsplash.com/800x500/?tree+plantation')}
-  .act-card:nth-child(3) .bg{background-image:url('https://source.unsplash.com/800x500/?women+empowerment')}
-  .act-card:nth-child(4) .bg{background-image:url('https://source.unsplash.com/800x500/?children+art,drawing')}
-  .act-card:nth-child(5) .bg{background-image:url('https://source.unsplash.com/800x500/?students+writing,india')}
-  .act-card:nth-child(6) .bg{background-image:url('https://source.unsplash.com/800x500/?charity,donation,india')}
+  .act-card:nth-child(1) .bg{background-image:url('https://images.unsplash.com/photo-1567592054260-7b8eaf32e9b1?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(2) .bg{background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(3) .bg{background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(4) .bg{background-image:url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(5) .bg{background-image:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(6) .bg{background-image:url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80')}
   .act-card:nth-child(2){grid-row:span 2;height:auto;min-height:580px}
   .act-content{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff;z-index:2}
   .act-content h4{font-size:1.4rem;color:var(--gold);margin-bottom:6px}
@@ -109,7 +109,7 @@
 
   /* TIMELINE */
   .timeline{position:relative;color:var(--offwhite);overflow:hidden}
-  .timeline-bg{position:absolute;inset:0;background:url('https://source.unsplash.com/1600x900/?community+gathering,india') center/cover no-repeat;opacity:.18}
+  .timeline-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1528605248644-14dd04022da1?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;opacity:.18}
   .timeline-overlay{position:absolute;inset:0;background:linear-gradient(180deg,var(--maroon) 0%,#4a0812 100%);opacity:.92}
   .timeline .container{position:relative;z-index:2}
   .timeline .section-title h2{color:var(--gold)}
@@ -127,7 +127,7 @@
 
   /* FORM */
   .nominate{position:relative;overflow:hidden}
-  .nominate-bg{position:absolute;inset:0;background:url('https://source.unsplash.com/1600x900/?india+heritage') center/cover no-repeat;filter:blur(6px);transform:scale(1.05)}
+  .nominate-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1564507592333-c60657eea523?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;filter:blur(6px);transform:scale(1.05)}
   .nominate-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(253,246,236,.92),rgba(255,107,0,.15))}
   .nominate .container{position:relative;z-index:2}
   .form-card{background:#fff;padding:48px;border-radius:20px;box-shadow:0 20px 60px rgba(123,13,30,.2);border-top:6px solid var(--saffron);max-width:780px;margin:0 auto}
@@ -154,7 +154,7 @@
 
   /* CONTACT */
   .contact{position:relative;color:#fff;overflow:hidden}
-  .contact-bg{position:absolute;inset:0;background:url('https://source.unsplash.com/1600x900/?kolkata,west+bengal') center/cover no-repeat}
+  .contact-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1558431382-27e303142255?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
   .contact-ov{position:absolute;inset:0;background:linear-gradient(135deg,rgba(123,13,30,.92),rgba(26,18,8,.88))}
   .contact .container{position:relative;z-index:2}
   .contact .section-title h2{color:var(--gold)}
