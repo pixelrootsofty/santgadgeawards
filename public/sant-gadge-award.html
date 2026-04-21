@@ -218,7 +218,7 @@
       <li><a href="#activities">Activities</a></li>
       <li><a href="#timeline">Journey</a></li>
       <li><a href="#nominate">Nominate</a></li>
-      <li><a href="#hof">Hall of Fame</a></li>
+      
       <li><a href="#contact">Contact</a></li>
     </ul>
     <button class="hamburger" id="hamburger" aria-label="Menu"><i class="fa-solid fa-bars"></i></button>
@@ -419,18 +419,6 @@
   </div>
 </section>
 
-<!-- HALL OF FAME -->
-<section class="hof" id="hof">
-  <div class="container">
-    <div class="section-title fade-in">
-      <span class="eyebrow">Hall of Fame</span>
-      <h2>Past Awardees</h2>
-      <div class="underline"></div>
-    </div>
-    <div class="hof-grid" id="hofGrid"></div>
-  </div>
-</section>
-
 <!-- CONTACT -->
 <section class="contact" id="contact">
   <div class="contact-bg"></div>
@@ -469,27 +457,6 @@
   const nl = document.getElementById('navLinks');
   hb.addEventListener('click', () => nl.classList.toggle('open'));
   nl.querySelectorAll('a').forEach(a => a.addEventListener('click', () => nl.classList.remove('open')));
-
-  // Hall of fame
-  const awardees = [
-    {n:'Dr. Anjali Sharma', s:'Healthcare', y:2021, c:'#FF6B00'},
-    {n:'Ramesh Kumar', s:'NDRF', y:2022, c:'#7B0D1E'},
-    {n:'Priya Banerjee', s:'Education', y:2023, c:'#D4AF37'},
-    {n:'Subrata Ghosh', s:'Community Welfare', y:2024, c:'#2E7D32'},
-    {n:'Meera Iyer', s:'Women Empowerment', y:2025, c:'#5E35B1'},
-    {n:'Arjun Das', s:'Environment', y:2025, c:'#0277BD'}
-  ];
-  const hg = document.getElementById('hofGrid');
-  awardees.forEach(a => {
-    const initials = a.n.split(' ').map(x=>x[0]).slice(0,2).join('');
-    hg.insertAdjacentHTML('beforeend', `
-      <div class="hof-card fade-in">
-        <div class="avatar" style="background:linear-gradient(135deg,${a.c},${a.c}cc)">${initials}</div>
-        <h4>${a.n}</h4>
-        <div class="sector">${a.s}</div>
-        <span class="yr">Awardee ${a.y}</span>
-      </div>`);
-  });
 
   // Intersection Observer fade-in
   const io = new IntersectionObserver((entries) => {
