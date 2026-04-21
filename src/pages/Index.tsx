@@ -19,6 +19,7 @@ const Index = () => {
     <iframe
       src="/sant-gadge-award.html"
       title="Sant Gadge Seva Award 2026"
+      sandbox="allow-same-origin allow-scripts allow-forms allow-popups allow-top-navigation allow-top-navigation-by-user-activation"
       style={{ border: "none", width: "100vw", height: "100vh", display: "block" }}
     />
   );
