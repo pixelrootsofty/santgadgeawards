@@ -93,22 +93,24 @@
   /* ACTIVITIES */
   .activities{background:var(--offwhite)}
   .act-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-  .act-card{position:relative;height:280px;border-radius:14px;overflow:hidden;cursor:pointer;transition:.4s;box-shadow:0 8px 24px rgba(0,0,0,.12)}
+  .act-card{position:relative;height:280px;border-radius:14px;overflow:hidden;cursor:pointer;transition:.4s;box-shadow:0 8px 24px rgba(0,0,0,.12);display:block;color:inherit;text-decoration:none}
   .act-card .bg{position:absolute;inset:0;background-size:cover;background-position:center;transition:.6s}
   .act-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85) 100%);transition:.4s}
   .act-card:hover .bg{transform:scale(1.1)}
   .act-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.25)}
   .act-card:nth-child(1) .bg{background-image:url('/images/durga-puja.jpg')}
-  .act-card:nth-child(2) .bg{background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=80')}
-  .act-card:nth-child(3) .bg{background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80')}
-  .act-card:nth-child(4) .bg{background-image:url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(2) .bg{background-image:url('/images/plantation.jpg')}
+  .act-card:nth-child(3) .bg{background-image:url('/images/womens-day.jpg')}
+  .act-card:nth-child(4) .bg{background-image:url('/images/drawing.jpg')}
   .act-card:nth-child(5) .bg{background-image:url('https://images.unsplash.com/photo-1456513080510-7bf3a84b82f8?auto=format&fit=crop&w=900&q=80')}
-  .act-card:nth-child(6) .bg{background-image:url('https://images.unsplash.com/photo-1469571486292-0ba58a3f068b?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(6) .bg{background-image:url('/images/community.jpg')}
   .act-card:nth-child(2){grid-row:span 2;height:auto;min-height:580px}
   .act-content{position:absolute;bottom:0;left:0;right:0;padding:24px;color:#fff;z-index:2}
   .act-content h4{font-size:1.4rem;color:var(--gold);margin-bottom:6px}
   .act-content p{font-size:.92rem;opacity:.9}
   .act-tag{display:inline-block;background:var(--saffron);color:#fff;padding:4px 12px;border-radius:20px;font-size:.75rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;margin-bottom:10px}
+  .act-more{display:inline-flex;align-items:center;gap:6px;margin-top:10px;color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.72rem;transition:.3s}
+  .act-card:hover .act-more{gap:12px;color:#fff}
 
   /* TIMELINE */
   .timeline{position:relative;color:var(--offwhite);overflow:hidden}
@@ -306,30 +308,30 @@
       <div class="underline"></div>
     </div>
     <div class="act-grid">
-      <div class="act-card fade-in">
+      <a href="/programs/durga-puja.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Festival</span><h4>Durga Puja Programs</h4><p>Community feasts and cultural outreach during Bengal's grandest festival.</p></div>
-      </div>
-      <div class="act-card fade-in">
+        <div class="act-content"><span class="act-tag">Festival</span><h4>Durga Puja Programs</h4><p>Community feasts and cultural outreach during Bengal's grandest festival.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="/programs/plantation.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Environment</span><h4>Plantation Drives</h4><p>Thousands of saplings planted across districts each monsoon, greening neighborhoods and schools.</p></div>
-      </div>
-      <div class="act-card fade-in">
+        <div class="act-content"><span class="act-tag">Environment</span><h4>Plantation Drives</h4><p>Thousands of saplings planted across districts each monsoon, greening neighborhoods and schools.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="/programs/womens-day.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Empowerment</span><h4>Women's Day Celebration</h4><p>Felicitating extraordinary women shaping their communities.</p></div>
-      </div>
-      <div class="act-card fade-in">
+        <div class="act-content"><span class="act-tag">Empowerment</span><h4>Women's Day Celebration</h4><p>Felicitating extraordinary women shaping their communities.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="/programs/drawing.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Children</span><h4>Drawing Competitions</h4><p>Nurturing creativity in young minds with annual art contests.</p></div>
-      </div>
-      <div class="act-card fade-in">
+        <div class="act-content"><span class="act-tag">Children</span><h4>Drawing Competitions</h4><p>Nurturing creativity in young minds with annual art contests.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="/programs/essay.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Education</span><h4>Essay Competitions</h4><p>Encouraging students to write on civic values, service, and nation-building.</p></div>
-      </div>
-      <div class="act-card fade-in">
+        <div class="act-content"><span class="act-tag">Education</span><h4>Essay Competitions</h4><p>Encouraging students to write on civic values, service, and nation-building.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
+      <a href="/programs/community-outreach.html" target="_top" class="act-card fade-in">
         <div class="bg"></div><div class="ov"></div>
-        <div class="act-content"><span class="act-tag">Charity</span><h4>Community Outreach</h4><p>Distributing essentials, organizing health camps, and supporting families in need.</p></div>
-      </div>
+        <div class="act-content"><span class="act-tag">Charity</span><h4>Community Outreach</h4><p>Distributing essentials, organizing health camps, and supporting families in need.</p><span class="act-more">Learn more <i class="fa-solid fa-arrow-right"></i></span></div>
+      </a>
     </div>
   </div>
 </section>
