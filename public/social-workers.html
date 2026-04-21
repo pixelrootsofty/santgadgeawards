@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Social Workers — Sant Gadge Seva Award 2026</title>
+<meta name="description" content="Social Workers honored under the Sant Gadge Seva Award — community organizers, awareness campaigners, relief volunteers, and citizens devoted to public welfare." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{--saffron:#FF6B00;--maroon:#7B0D1E;--gold:#D4AF37;--offwhite:#FDF6EC;--ink:#1a1208}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Lato',sans-serif;color:var(--ink);background:var(--offwhite);line-height:1.7}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(123,13,30,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--gold)}
+  .nav{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between}
+  .logo{font-family:'Playfair Display',serif;color:var(--offwhite);font-size:1.25rem;font-weight:900;display:flex;align-items:center;gap:10px}
+  .logo i{color:var(--gold)}
+  .back-link{color:var(--offwhite);font-size:.95rem;display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border:1px solid var(--gold);border-radius:50px;transition:.2s}
+  .back-link:hover{background:var(--gold);color:var(--maroon)}
+
+  .hero{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:120px 24px 60px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,0,.7),rgba(123,13,30,.9))}
+  .hero-content{position:relative;z-index:2;max-width:900px}
+  .eyebrow{display:inline-block;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.85rem;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.4rem,5.5vw,4.5rem);font-weight:900;text-shadow:0 4px 24px rgba(0,0,0,.4);margin-bottom:18px}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{font-size:clamp(1.05rem,1.4vw,1.25rem);font-style:italic;font-weight:300;opacity:.95;max-width:760px;margin:0 auto}
+
+  section{padding:80px 24px}
+  .container{max-width:1100px;margin:0 auto}
+  .intro h2{color:var(--maroon);font-size:clamp(1.8rem,2.8vw,2.4rem);margin-bottom:18px}
+  .intro p{color:#444;font-size:1.05rem;margin-bottom:14px}
+  .gold-bar{width:80px;height:4px;background:var(--gold);border-radius:2px;margin-bottom:24px}
+
+  .pillars{background:linear-gradient(180deg,#fff,var(--offwhite))}
+  .pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:22px;margin-top:40px}
+  .pillar{background:#fff;border:1px solid #eadfc7;border-radius:16px;padding:30px 22px;text-align:center;box-shadow:0 8px 24px rgba(123,13,30,.08);transition:.3s}
+  .pillar:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(123,13,30,.18);border-color:var(--gold)}
+  .pillar-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--maroon));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 18px;border:2px solid var(--gold)}
+  .pillar h3{color:var(--maroon);font-size:1.3rem;margin-bottom:10px}
+  .pillar p{color:#555;font-size:.95rem}
+
+  .quote{background:var(--maroon);color:var(--offwhite);text-align:center;padding:70px 24px;position:relative}
+  .quote i.fa-quote-left{font-size:2.4rem;color:var(--gold);margin-bottom:16px;display:block}
+  .quote blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.3rem,2.2vw,1.8rem);font-style:italic;max-width:840px;margin:0 auto;line-height:1.5}
+  .quote cite{display:block;margin-top:20px;color:var(--gold);font-style:normal;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+
+  .activities-detail{background:var(--offwhite)}
+  .act-row{display:grid;grid-template-columns:1.2fr 1fr;gap:50px;align-items:center;margin-top:40px}
+  .act-row.reverse{grid-template-columns:1fr 1.2fr}
+  .act-row.reverse .act-text{order:2}
+  .act-row.reverse .act-img{order:1}
+  .act-text h3{color:var(--maroon);font-size:1.6rem;margin-bottom:14px}
+  .act-text ul{padding-left:20px;color:#444;margin-top:10px}
+  .act-text ul li{margin-bottom:6px}
+  .act-img{height:300px;border-radius:18px;overflow:hidden;border:4px solid var(--gold);box-shadow:0 16px 40px rgba(123,13,30,.2);background-size:cover;background-position:center}
+  @media(max-width:768px){.act-row,.act-row.reverse{grid-template-columns:1fr}.act-row.reverse .act-text{order:1}.act-row.reverse .act-img{order:2}}
+
+  .impact{background:linear-gradient(180deg,#fff,var(--offwhite))}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:24px;margin-top:36px}
+  .stat{text-align:center;padding:30px 20px;background:#fff;border-top:4px solid var(--saffron);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .stat .num{font-family:'Playfair Display',serif;font-size:2.6rem;font-weight:900;color:var(--maroon);display:block}
+  .stat .lbl{color:#666;font-size:.95rem;letter-spacing:1px;text-transform:uppercase}
+
+  .cta{background:linear-gradient(135deg,var(--saffron),var(--maroon));color:#fff;text-align:center;padding:80px 24px}
+  .cta h2{font-size:clamp(1.8rem,3vw,2.5rem);margin-bottom:14px}
+  .cta p{opacity:.95;margin-bottom:28px;font-size:1.05rem}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.95rem;transition:.3s}
+  .btn-gold{background:var(--gold);color:var(--maroon);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .btn-gold:hover{background:#fff;transform:translateY(-3px)}
+
+  footer{background:#1a1208;color:#bbb;padding:40px 24px;text-align:center;font-size:.9rem}
+  footer a{color:var(--gold)}
+
+  @media(max-width:640px){
+    .nav{padding:12px 18px}
+    section{padding:60px 20px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><i class="fa-solid fa-award"></i> Sant Gadge Seva Award</a>
+    <a href="/#categories" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Categories</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Award Category 02</span>
+    <h1><span>Social</span> Workers</h1>
+    <p class="lead">Individuals actively engaged in social development — helping underprivileged communities, leading awareness campaigns, and shaping a more compassionate society.</p>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <h2>The Quiet Force Behind Every Community</h2>
+    <div class="gold-bar"></div>
+    <p>For every visible milestone of progress, there are dozens of social workers whose names rarely appear in headlines. They are the volunteers organising relief after a flood, the campaigners knocking on doors to spread awareness, and the neighbourhood organisers turning small gatherings into movements.</p>
+    <p>The Sant Gadge Seva Award celebrates these individuals — citizens whose work directly improves the lives of underprivileged communities and inspires others to follow. Their service is rooted in the same teachings of cleanliness, compassion, and public welfare that Sant Gadge Maharaj championed throughout his life.</p>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="container">
+    <h2 style="color:var(--maroon);text-align:center;font-size:clamp(1.8rem,2.6vw,2.2rem)">Four Pillars of Social Work</h2>
+    <div class="gold-bar" style="margin:18px auto 0"></div>
+    <div class="pillar-grid">
+      <div class="pillar">
+        <div class="pillar-icon"><i class="fa-solid fa-people-group"></i></div>
+        <h3>Community Support</h3>
+        <p>Programs that strengthen neighborhoods through food drives, education access, and elder care initiatives.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon"><i class="fa-solid fa-bullhorn"></i></div>
+        <h3>Awareness Campaigns</h3>
+        <p>Door-to-door and digital outreach on public health, sanitation, women's rights, and environmental responsibility.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon"><i class="fa-solid fa-hand-holding-heart"></i></div>
+        <h3>Relief Activities</h3>
+        <p>Disaster response, blood donation drives, oxygen and medicine distribution, and emergency assistance to families in need.</p>
+      </div>
+      <div class="pillar">
+        <div class="pillar-icon"><i class="fa-solid fa-seedling"></i></div>
+        <h3>Public Welfare Initiatives</h3>
+        <p>Long-term projects in education, livelihood, healthcare access, and environmental protection across Bengal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <i class="fa-solid fa-quote-left"></i>
+  <blockquote>Service to humanity is service to the divine. The social worker who quietly cleans a street, teaches a child, or comforts a stranger carries forward the legacy of Sant Gadge Maharaj.</blockquote>
+  <cite>— From the Award Committee</cite>
+</section>
+
+<section class="activities-detail">
+  <div class="container">
+    <h2 style="color:var(--maroon);text-align:center;font-size:clamp(1.8rem,2.6vw,2.2rem)">Programs Led by Our Awardees</h2>
+    <div class="gold-bar" style="margin:18px auto 0"></div>
+
+    <div class="act-row">
+      <div class="act-text">
+        <h3>Durga Puja Community Programs</h3>
+        <p>During the Durga Puja celebrations, our social workers organise community programs that bring neighbourhoods together and spread messages of unity, culture, and harmony.</p>
+        <ul>
+          <li>Community gatherings and feasts</li>
+          <li>Cultural participation across age groups</li>
+          <li>Social awareness initiatives during Sarad Samman</li>
+        </ul>
+      </div>
+      <div class="act-img" style="background-image:url('/images/durga-puja.jpg')"></div>
+    </div>
+
+    <div class="act-row reverse">
+      <div class="act-text">
+        <h3>Plantation Drives</h3>
+        <p>Tree plantation campaigns are organised every monsoon to promote environmental awareness and encourage citizens to contribute to a greener, healthier Bengal.</p>
+        <ul>
+          <li>Promote environmental protection</li>
+          <li>Encourage community participation</li>
+          <li>Spread awareness about climate responsibility</li>
+        </ul>
+      </div>
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+
+    <div class="act-row">
+      <div class="act-text">
+        <h3>Women's Day Celebrations</h3>
+        <p>Special events organised every March 8 honour women's achievements and promote gender equality through felicitation ceremonies and discussions.</p>
+        <ul>
+          <li>Women empowerment discussions</li>
+          <li>Felicitation of women achievers</li>
+          <li>Awareness programs on rights and safety</li>
+        </ul>
+      </div>
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+
+    <div class="act-row reverse">
+      <div class="act-text">
+        <h3>Drawing & Essay Competitions</h3>
+        <p>Annual student competitions encourage creativity and critical thinking on themes of social responsibility, cleanliness, and nation-building.</p>
+        <ul>
+          <li>Themes: environment, harmony, Clean India</li>
+          <li>Open to schools across multiple districts</li>
+          <li>Awarded works are showcased at the ceremony</li>
+        </ul>
+      </div>
+      <div class="act-img" style="background-image:url('https://images.unsplash.com/photo-1503676260728-1c00da094a0b?auto=format&fit=crop&w=1200&q=80')"></div>
+    </div>
+  </div>
+</section>
+
+<section class="impact">
+  <div class="container">
+    <h2 style="color:var(--maroon);text-align:center;font-size:clamp(1.8rem,2.6vw,2.2rem)">Our Collective Impact</h2>
+    <div class="gold-bar" style="margin:18px auto 0"></div>
+    <div class="impact-grid">
+      <div class="stat"><span class="num">200+</span><span class="lbl">Social Workers Honored</span></div>
+      <div class="stat"><span class="num">15+</span><span class="lbl">Programs Each Year</span></div>
+      <div class="stat"><span class="num">10K+</span><span class="lbl">Lives Touched</span></div>
+      <div class="stat"><span class="num">5K+</span><span class="lbl">Saplings Planted</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Know a social worker who deserves recognition?</h2>
+  <p>Nominations for the Sant Gadge Seva Award 2026 are open.</p>
+  <a href="/#nominate" class="btn btn-gold"><i class="fa-solid fa-pen-to-square"></i> Nominate Now</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 Sant Gadge Seva Award. <a href="/">Back to home</a></p>
+</footer>
+</body>
+</html>

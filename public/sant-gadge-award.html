@@ -87,6 +87,8 @@
   .cat-icon{width:56px;height:56px;border-radius:50%;background:var(--saffron);display:flex;align-items:center;justify-content:center;font-size:1.5rem;margin-bottom:16px;border:2px solid var(--gold)}
   .cat-content h3{font-size:1.7rem;margin-bottom:10px;color:var(--gold)}
   .cat-content p{font-size:.98rem;opacity:.95}
+  .cat-link{display:inline-flex;align-items:center;gap:8px;margin-top:14px;color:var(--gold);font-weight:700;letter-spacing:1px;text-transform:uppercase;font-size:.8rem;transition:.3s}
+  .cat-card:hover .cat-link{gap:14px;color:#fff}
 
   /* ACTIVITIES */
   .activities{background:var(--offwhite)}
@@ -96,7 +98,7 @@
   .act-card .ov{position:absolute;inset:0;background:linear-gradient(180deg,transparent 30%,rgba(0,0,0,.85) 100%);transition:.4s}
   .act-card:hover .bg{transform:scale(1.1)}
   .act-card:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(0,0,0,.25)}
-  .act-card:nth-child(1) .bg{background-image:url('https://images.unsplash.com/photo-1605649487212-47bdab064df7?auto=format&fit=crop&w=900&q=80')}
+  .act-card:nth-child(1) .bg{background-image:url('/images/durga-puja.jpg')}
   .act-card:nth-child(2) .bg{background-image:url('https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=900&q=80')}
   .act-card:nth-child(3) .bg{background-image:url('https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?auto=format&fit=crop&w=900&q=80')}
   .act-card:nth-child(4) .bg{background-image:url('https://images.unsplash.com/photo-1503454537195-1dcabb73ffb9?auto=format&fit=crop&w=900&q=80')}
@@ -271,24 +273,26 @@
       <div class="underline"></div>
     </div>
     <div class="cat-grid">
-      <div class="cat-card fade-in">
+      <a href="/corona-warriors.html" target="_top" class="cat-card fade-in">
         <div class="bg"></div>
         <div class="ov"></div>
         <div class="cat-content">
           <div class="cat-icon"><i class="fa-solid fa-shield-heart"></i></div>
           <h3>Corona Warriors</h3>
           <p>Honoring NDRF, RPF, Police, AIIMS doctors, nurses, and medical staff who stood as the nation's shield through the darkest days of the pandemic.</p>
+          <span class="cat-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </div>
-      <div class="cat-card fade-in">
+      </a>
+      <a href="/social-workers.html" target="_top" class="cat-card fade-in">
         <div class="bg"></div>
         <div class="ov"></div>
         <div class="cat-content">
           <div class="cat-icon"><i class="fa-solid fa-hands-holding-circle"></i></div>
           <h3>Social Workers</h3>
           <p>Celebrating community organizers, awareness campaigners, relief volunteers, and citizens devoted to public welfare and grassroots transformation.</p>
+          <span class="cat-link">Learn more <i class="fa-solid fa-arrow-right"></i></span>
         </div>
-      </div>
+      </a>
     </div>
   </div>
 </section>
