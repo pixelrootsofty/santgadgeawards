@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="referrer" content="no-referrer">
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Drawing Competitions — Sant Gadge Seva Award 2026</title>
+<meta name="description" content="Drawing competitions for children and youth — encouraging creativity and social awareness through art, by the Sant Gadge Seva Award." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;900&family=Lato:wght@300;400;700;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+<style>
+  :root{--saffron:#FF6B00;--maroon:#7B0D1E;--gold:#D4AF37;--offwhite:#FDF6EC;--ink:#1a1208}
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{font-family:'Lato',sans-serif;color:var(--ink);background:var(--offwhite);line-height:1.7}
+  h1,h2,h3,h4{font-family:'Playfair Display',serif;line-height:1.2}
+  a{color:inherit;text-decoration:none}
+  header{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(123,13,30,.95);backdrop-filter:blur(8px);border-bottom:2px solid var(--gold)}
+  .nav{max-width:1280px;margin:0 auto;padding:14px 24px;display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap}
+  .logo{font-family:'Playfair Display',serif;color:var(--offwhite);font-size:1.15rem;font-weight:900;display:flex;align-items:center;gap:10px}
+  .logo i{color:var(--gold)}
+  .back-link{color:var(--offwhite);font-size:.9rem;display:inline-flex;align-items:center;gap:8px;padding:8px 18px;border:1px solid var(--gold);border-radius:50px;transition:.2s}
+  .back-link:hover{background:var(--gold);color:var(--maroon)}
+
+  .hero{position:relative;min-height:55vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;padding:130px 24px 60px;overflow:hidden}
+  .hero-bg{position:absolute;inset:0;background:url('/images/drawing.jpg') center/cover no-repeat}
+  .hero-overlay{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,0,.7),rgba(123,13,30,.92))}
+  .hero-content{position:relative;z-index:2;max-width:900px}
+  .eyebrow{display:inline-block;color:var(--gold);font-weight:700;letter-spacing:3px;text-transform:uppercase;font-size:.85rem;margin-bottom:14px}
+  .hero h1{font-size:clamp(2.2rem,5vw,4rem);font-weight:900;text-shadow:0 4px 24px rgba(0,0,0,.4);margin-bottom:18px}
+  .hero h1 span{color:var(--gold)}
+  .hero p.lead{font-size:clamp(1.05rem,1.4vw,1.2rem);font-style:italic;font-weight:300;opacity:.95;max-width:760px;margin:0 auto}
+
+  section{padding:80px 24px}
+  .container{max-width:1100px;margin:0 auto}
+  .intro h2{color:var(--maroon);font-size:clamp(1.8rem,2.8vw,2.4rem);margin-bottom:18px}
+  .intro p{color:#444;font-size:1.05rem;margin-bottom:14px}
+  .gold-bar{width:80px;height:4px;background:var(--gold);border-radius:2px;margin-bottom:24px}
+
+  .feature{background:linear-gradient(180deg,#fff,var(--offwhite))}
+  .feature-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+  .feature-img{position:relative;border-radius:18px;overflow:hidden;box-shadow:0 18px 50px rgba(123,13,30,.25);aspect-ratio:4/3}
+  .feature-img img{width:100%;height:100%;object-fit:cover;display:block}
+  .feature-img::after{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,107,0,.12),rgba(123,13,30,.18));pointer-events:none}
+  .feature h2{color:var(--maroon);font-size:clamp(1.6rem,2.4vw,2rem);margin-bottom:14px}
+  .feature p{color:#555;font-size:1rem;margin-bottom:14px}
+  .feature ul{list-style:none;margin-top:18px}
+  .feature ul li{padding:10px 0 10px 32px;position:relative;color:#444}
+  .feature ul li::before{content:'\f00c';font-family:'Font Awesome 6 Free';font-weight:900;position:absolute;left:0;top:10px;color:var(--saffron);width:22px;height:22px;background:rgba(255,107,0,.12);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.7rem}
+
+  .pillars{background:var(--offwhite)}
+  .pillar-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:22px;margin-top:40px}
+  .pillar{background:#fff;border:1px solid #eadfc7;border-radius:16px;padding:30px 22px;text-align:center;box-shadow:0 8px 24px rgba(123,13,30,.08);transition:.3s}
+  .pillar:hover{transform:translateY(-6px);box-shadow:0 18px 40px rgba(123,13,30,.18);border-color:var(--gold)}
+  .pillar-icon{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--saffron),var(--maroon));color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.6rem;margin:0 auto 18px;border:2px solid var(--gold)}
+  .pillar h3{color:var(--maroon);font-size:1.2rem;margin-bottom:10px}
+  .pillar p{color:#555;font-size:.95rem}
+
+  .quote{background:var(--maroon);color:var(--offwhite);text-align:center;padding:70px 24px}
+  .quote i.fa-quote-left{font-size:2.2rem;color:var(--gold);margin-bottom:16px;display:block}
+  .quote blockquote{font-family:'Playfair Display',serif;font-size:clamp(1.2rem,2vw,1.6rem);font-style:italic;max-width:840px;margin:0 auto;line-height:1.5}
+  .quote cite{display:block;margin-top:20px;color:var(--gold);font-style:normal;letter-spacing:2px;text-transform:uppercase;font-size:.85rem}
+
+  .impact{background:#fff}
+  .impact-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px;margin-top:36px}
+  .stat{text-align:center;padding:30px 20px;background:var(--offwhite);border-top:4px solid var(--saffron);border-radius:12px;box-shadow:0 6px 18px rgba(0,0,0,.06)}
+  .stat .num{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:900;color:var(--maroon);display:block}
+  .stat .lbl{color:#666;font-size:.9rem;letter-spacing:1px;text-transform:uppercase}
+
+  .cta{background:linear-gradient(135deg,var(--saffron),var(--maroon));color:#fff;text-align:center;padding:80px 24px}
+  .cta h2{font-size:clamp(1.8rem,3vw,2.4rem);margin-bottom:14px}
+  .cta p{opacity:.95;margin-bottom:28px;font-size:1.05rem}
+  .btn{display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border-radius:50px;font-weight:700;text-transform:uppercase;letter-spacing:1px;font-size:.95rem;transition:.3s}
+  .btn-gold{background:var(--gold);color:var(--maroon);box-shadow:0 8px 24px rgba(0,0,0,.25)}
+  .btn-gold:hover{background:#fff;transform:translateY(-3px)}
+
+  footer{background:#1a1208;color:#bbb;padding:40px 24px;text-align:center;font-size:.9rem}
+  footer a{color:var(--gold)}
+
+  @media(max-width:780px){
+    .feature-grid{grid-template-columns:1fr;gap:32px}
+  }
+  @media(max-width:640px){
+    .nav{padding:12px 18px}
+    section{padding:60px 20px}
+  }
+</style>
+</head>
+<body>
+<header>
+  <nav class="nav">
+    <a href="/" class="logo"><i class="fa-solid fa-award"></i> Sant Gadge Seva Award</a>
+    <a href="/#activities" class="back-link"><i class="fa-solid fa-arrow-left"></i> Back to Programs</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <div class="hero-bg"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">Program 04 — Children</span>
+    <h1><span>Drawing</span> Competitions</h1>
+    <p class="lead">Encouraging creativity in children and youth, while spreading social awareness through the universal language of art.</p>
+  </div>
+</section>
+
+<section class="intro">
+  <div class="container">
+    <h2>When Children Draw, Society Listens</h2>
+    <div class="gold-bar"></div>
+    <p>Our annual drawing competition invites students from primary and secondary schools across Bengal to put their visions of a better society on paper. The themes are deliberately serious — environment, harmony, cleanliness — but the canvases are wonderfully unfiltered.</p>
+    <p>Selected entries travel as a touring exhibition to schools, government offices and the main award ceremony, where the young artists are felicitated alongside doctors, soldiers and social workers.</p>
+  </div>
+</section>
+
+<section class="feature">
+  <div class="container">
+    <div class="feature-grid">
+      <div class="feature-img"><img src="/images/drawing.jpg" alt="Drawing Competitions — Sant Gadge Seva Award" loading="lazy"></div>
+      <div>
+        <h2>Themes Our Young Artists Explore</h2>
+        <div class="gold-bar"></div>
+        <p>Children receive a free art kit on arrival, two hours of quiet space, and a panel of artists and educators to judge — but no prescriptive answers.</p>
+        <ul>
+          <li><strong>Environment</strong> — climate, rivers, forests and the world we want to inherit</li>
+          <li><strong>Social harmony</strong> — friendship across faiths, languages and backgrounds</li>
+          <li><strong>Cleanliness</strong> — Sant Gadge Maharaj's lifelong message, in every brushstroke</li>
+          <li><strong>Community welfare</strong> — heroes, helpers and the people who make a neighbourhood feel like home</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="pillars">
+  <div class="container">
+    <h2 style="color:var(--maroon);text-align:center;font-size:clamp(1.6rem,2.4vw,2rem)">How the Competition Works</h2>
+    <div class="gold-bar" style="margin:18px auto 0"></div>
+    <div class="pillar-grid">
+      <div class="pillar"><div class="pillar-icon"><i class="fa-solid fa-palette"></i></div><h3>Open to All</h3><p>Free entry for students from grades 3 to 12.</p></div>
+      <div class="pillar"><div class="pillar-icon"><i class="fa-solid fa-paintbrush"></i></div><h3>Free Art Kits</h3><p>Every participant receives paper, colours and brushes.</p></div>
+      <div class="pillar"><div class="pillar-icon"><i class="fa-solid fa-trophy"></i></div><h3>Felicitations</h3><p>Winners honoured at the main award ceremony.</p></div>
+      <div class="pillar"><div class="pillar-icon"><i class="fa-solid fa-image"></i></div><h3>Touring Show</h3><p>Top entries exhibited across schools and offices.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="quote">
+  <i class="fa-solid fa-quote-left"></i>
+  <blockquote>Give a child a brush and ask them to paint a clean society — they will hand you back a manifesto.</blockquote>
+  <cite>— From the Award Committee</cite>
+</section>
+
+<section class="impact">
+  <div class="container">
+    <h2 style="color:var(--maroon);text-align:center;font-size:clamp(1.6rem,2.4vw,2rem)">Impact at a Glance</h2>
+    <div class="gold-bar" style="margin:18px auto 0"></div>
+    <div class="impact-grid">
+      <div class="stat"><span class="num">800+</span><span class="lbl">Young Artists</span></div>
+      <div class="stat"><span class="num">4</span><span class="lbl">Themes Each Year</span></div>
+      <div class="stat"><span class="num">50+</span><span class="lbl">Schools Participating</span></div>
+      <div class="stat"><span class="num">30</span><span class="lbl">Winning Artworks Toured</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Bring the drawing competition to your school</h2>
+  <p>Schools and parents can register for the next edition today.</p>
+  <a href="/#nominate" class="btn btn-gold"><i class="fa-solid fa-pen-to-square"></i> Nominate Now</a>
+</section>
+
+<footer>
+  <p>&copy; 2026 Sant Gadge Seva Award. <a href="/">Back to home</a></p>
+</footer>
+</body>
+</html>
