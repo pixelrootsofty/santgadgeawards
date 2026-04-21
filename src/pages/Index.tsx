@@ -1,16 +1,27 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+import { useEffect } from "react";
 
-// IMPORTANT: Fully REPLACE this with your own code
-const PlaceholderIndex = () => {
-  // PLACEHOLDER: Replace this entire return statement with the user's app.
-  // The inline background color is intentionally not part of the design system.
+const Index = () => {
+  useEffect(() => {
+    document.title = "Sant Gadge Seva Award 2026 — Honoring Selfless Service";
+    const meta = document.querySelector('meta[name="description"]') || (() => {
+      const m = document.createElement("meta");
+      m.setAttribute("name", "description");
+      document.head.appendChild(m);
+      return m;
+    })();
+    meta.setAttribute(
+      "content",
+      "Sant Gadge Seva Award 2026 — recognizing unsung heroes in social service & healthcare. 10 May 2026, Sukanta Sadan, Barrackpore, Kolkata."
+    );
+  }, []);
+
   return (
-    <div className="flex min-h-screen items-center justify-center" style={{ backgroundColor: '#fcfbf8' }}>
-      <img data-lovable-blank-page-placeholder="REMOVE_THIS" src="/placeholder.svg" alt="Your app will live here!" />
-    </div>
+    <iframe
+      src="/sant-gadge-award.html"
+      title="Sant Gadge Seva Award 2026"
+      style={{ border: "none", width: "100vw", height: "100vh", display: "block" }}
+    />
   );
 };
-
-const Index = PlaceholderIndex;
 
 export default Index;
