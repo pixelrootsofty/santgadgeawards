@@ -451,9 +451,13 @@
   }, {threshold:.12});
   document.querySelectorAll('.fade-in').forEach(el => io.observe(el));
 
-  // Form validation
+  // Form validation + Google Sheets submission
+  const APPS_SCRIPT_URL = 'https://script.google.com/macros/s/AKfycbw3WjgKUhFGSIlIgQU8U5js5i7BkfxOpGCwOKBL2-6_TesQQpzJs91z3LKRVmVn0sT6RA/exec';
   const form = document.getElementById('nomForm');
-  form.addEventListener('submit', (e) => {
+  const submitBtn = form.querySelector('button[type="submit"]');
+  const originalBtnHTML = submitBtn.innerHTML;
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
     let valid = true;
     form.querySelectorAll('input, select, textarea').forEach(f => {
@@ -468,11 +472,39 @@
       f.style.borderColor = bad ? '#c0392b' : '';
       if (bad) valid = false;
     });
-    if (valid) {
+    if (!valid) return;
+
+    const payload = {
+      nominee: form.nomineeName.value.trim(),
+      profession: form.profession.value.trim(),
+      category: form.category.value,
+      yourName: form.nominator.value.trim(),
+      email: form.email.value.trim(),
+      phone: form.phone.value.trim(),
+      description: form.description.value.trim()
+    };
+
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = '<i class="fa-solid fa-spinner fa-spin"></i> Submitting...';
+
+    try {
+      // no-cors + text/plain avoids CORS preflight; Apps Script still reads e.postData.contents
+      await fetch(APPS_SCRIPT_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'text/plain;charset=utf-8' },
+        body: JSON.stringify(payload)
+      });
       document.getElementById('formSuccess').style.display = 'block';
       form.reset();
       document.getElementById('formSuccess').scrollIntoView({behavior:'smooth', block:'center'});
       setTimeout(()=>document.getElementById('formSuccess').style.display='none', 8000);
+    } catch (err) {
+      alert('Sorry, there was an error submitting your nomination. Please try again or contact us directly.');
+      console.error('Submission error:', err);
+    } finally {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalBtnHTML;
     }
   });
 
